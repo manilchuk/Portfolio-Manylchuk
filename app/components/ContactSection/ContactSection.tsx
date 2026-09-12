@@ -36,7 +36,7 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="https://drive.google.com/file/d/1kvwUjjluPShVcTKnMesyc4KzXphBNV-X/view?usp=sharing"
+              href="/resume_standart_en.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.secondaryLink}
