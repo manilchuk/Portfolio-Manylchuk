@@ -10,8 +10,8 @@ export default function HeroSection() {
         <Image
           src="/portrait.jpg"
           alt="Profile Picture"
-          width={120}
-          height={120}
+          width={140}
+          height={175}
           className={styles.image}
         />
       </div>

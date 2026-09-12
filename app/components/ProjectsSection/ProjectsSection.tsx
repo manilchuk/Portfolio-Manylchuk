@@ -33,7 +33,7 @@ const projects = [
     id: 4,
     title: 'TravelTrucks — Camper Rental',
     description:
-      'Camper van rental platform with a searchable catalog, filtering by features, and detailed vehicle pages.',
+      'Camper van rental platform with a searchable catalog, advanced filtering by features, detailed vehicle pages, and a seamless booking experience.',
     image: '/traveltrucks.webp',
     link: 'https://travel-trucks-ruddy-xi.vercel.app/',
     githubLink: 'https://github.com/manilchuk/TravelTrucks',
