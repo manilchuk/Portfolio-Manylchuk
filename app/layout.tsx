@@ -13,37 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Manylchuk Valentyn - Developer',
+  metadataBase: new URL('https://portfolio-manylchuk.vercel.app/'),
+  title: 'Manylchuk Valentyn | Full Stack Developer',
   description:
-    'Welcome to my portfolio! I am a passionate developer who believes in simplicity and effectiveness. I focus on creating straightforward solutions that solve real problems, with clean code and intuitive user experiences.',
+    'Portfolio of Valentyn Manylchuk, a Full Stack Developer building modern, scalable web applications with JavaScript, TypeScript, React, Next.js, and Node.js.',
   keywords: [
-    'Software Developer',
+    'Valentyn Manylchuk',
+    'Full Stack Developer',
     'Web Developer',
-    'Clean Code',
-    'Simple Design',
     'JavaScript',
     'TypeScript',
     'React',
     'Next.js',
-    'User Experience',
-    'Problem Solving',
-    'Effective Solutions',
-    'Web Development',
-    'Frontend Development',
-    'Backend Development',
-    'Manylchuk Valentyn',
+    'Node.js',
   ],
   authors: [{ name: 'Manylchuk Valentyn' }],
   creator: 'Manylchuk Valentyn',
   openGraph: {
-    title: 'Manylchuk Valentyn - Developer Portfolio',
+    title: 'Manylchuk Valentyn | Full Stack Developer',
     description:
-      'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
-    url: 'https://portfolio-theta-seven-adrr0bu12s.vercel.app/',
+      'Portfolio of Valentyn Manylchuk, a Full Stack Developer building modern, scalable web applications with JavaScript, TypeScript, React, Next.js, and Node.js.',
+    url: 'https://portfolio-manylchuk.vercel.app/',
     siteName: 'Manylchuk Valentyn - Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'Manylchuk Valentyn - Developer Portfolio',
@@ -54,11 +48,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manylchuk Valentyn - Developer',
+    title: 'Manylchuk Valentyn | Full Stack Developer',
     description:
-      'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
-    creator: 'Manylchuk Valentyn',
-    images: ['/og-image.jpg'],
+      'Portfolio of Valentyn Manylchuk, a Full Stack Developer building modern, scalable web applications with JavaScript, TypeScript, React, Next.js, and Node.js.',
+    images: ['/og-image.webp'],
   },
   robots: {
     index: true,
