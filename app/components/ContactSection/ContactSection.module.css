@@ -1,0 +1,135 @@
+.section {
+  padding: 64px 16px;
+  background-color: var(--color-gray-900);
+}
+
+.container {
+  width: 100%;
+  max-width: 672px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-gray-300);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: normal;
+  color: var(--color-gray-300);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.primaryLink,
+.secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primaryLink {
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.primaryLink:hover {
+  background-color: var(--color-blue);
+}
+
+.secondaryLink {
+  border: 1px solid var(--color-gray-400);
+  color: var(--color-gray-300);
+  background-color: var(--color-gray-700);
+}
+
+.secondaryLink:hover {
+  background-color: var(--color-gray-900);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: var(--color-white);
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 64px 24px;
+  }
+
+  .actions {
+    flex-direction: row;
+    width: auto;
+  }
+}
