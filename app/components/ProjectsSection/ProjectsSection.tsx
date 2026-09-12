@@ -24,7 +24,7 @@ const projects: Project[] = [
     description:
       'Responsive team landing page for an eco-friendly bags brand, featuring a product catalog, image gallery, and contact form.',
     image: '/ecotote.webp',
-    link: 'https://romanromanr.github.io/first-team-project/index.html',
+    link: 'https://manilchuk.github.io/first-team-project/',
     githubLink: 'https://github.com/manilchuk/first-team-project',
     type: 'team',
     role: 'Frontend developer — implemented header, mobile menu, footer & gallery',
