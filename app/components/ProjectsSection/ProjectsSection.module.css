@@ -61,6 +61,32 @@
   object-fit: cover;
 }
 
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(4px);
+}
+
+.badgeTeam {
+  background-color: rgb(96 165 250 / 0.18);
+  color: var(--color-link);
+  border: 1px solid rgb(96 165 250 / 0.4);
+}
+
+.badgeSolo {
+  background-color: rgb(74 222 128 / 0.18);
+  color: var(--color-badgeSolo);
+  border: 1px solid rgb(74 222 128 / 0.4);
+}
+
 .content {
   padding: 16px;
 }
@@ -74,10 +100,26 @@
 }
 
 .description {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   font-size: 14px;
   line-height: 1.5;
   color: var(--color-gray-300);
+}
+
+.role {
+  margin: 0 0 16px;
+  padding: 8px 12px;
+  border-left: 2px solid var(--color-link);
+  background-color: rgb(96 165 250 / 0.08);
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-gray-300);
+}
+
+.roleLabel {
+  font-weight: 600;
+  color: var(--color-gray-100);
 }
 
 .footer {
@@ -89,13 +131,43 @@
 .link {
   font-size: 14px;
   font-weight: 500;
-  color: #60a5fa;
+  color: var(--color-link);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .link:hover {
-  color: #93c5fd;
+  color: var(--color-link-hover);
+}
+
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.loadMoreButton {
+  padding: 10px 24px;
+  border: 1px solid var(--color-gray-700);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.loadMoreButton:hover {
+  background-color: var(--color-gray-900);
+  border-color: var(--color-link);
+}
+
+.loadMoreButton:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
 }
 
 @media (min-width: 640px) {
@@ -135,7 +207,20 @@
     font-size: 16px;
   }
 
+  .role {
+    font-size: 14px;
+  }
+
   .link {
+    font-size: 16px;
+  }
+
+  .loadMoreWrapper {
+    margin-top: 48px;
+  }
+
+  .loadMoreButton {
+    padding: 12px 32px;
     font-size: 16px;
   }
 }

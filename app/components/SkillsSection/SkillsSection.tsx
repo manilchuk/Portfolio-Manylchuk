@@ -15,7 +15,7 @@ export default function SkillsSection() {
     'Git',
     'GitHub',
     'Vite',
-    'Prettier',
+    'Zustand',
     'REST API',
   ];
 
