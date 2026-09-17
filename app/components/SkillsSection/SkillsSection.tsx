@@ -1,6 +1,11 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 import styles from './SkillsSection.module.css';
 
 export default function SkillsSection() {
+  const t = useTranslations('SkillsSection');
   const skills: string[] = [
     'HTML5',
     'CSS3',
@@ -22,7 +27,7 @@ export default function SkillsSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Skills & Technologies</h2>
+        <h2 className={styles.title}>{t('title')}</h2>
 
         <ul className={styles.skills}>
           {skills.map((skill) => (

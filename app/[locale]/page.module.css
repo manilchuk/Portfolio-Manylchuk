@@ -1,0 +1,13 @@
+.main {
+  min-height: 100vh;
+  padding-top: 48px;
+  background-color: var(--color-background);
+}
+.languageSwitcherWrapper {
+  width: 100%;
+  max-width: 896px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: flex-end;
+}

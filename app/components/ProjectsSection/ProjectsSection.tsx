@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
 import styles from './ProjectsSection.module.css';
 
 type ProjectType = 'team' | 'solo';
@@ -81,13 +83,15 @@ const projects: Project[] = [
     link: 'https://stpp-398.vercel.app/',
     githubLink: 'https://github.com/manilchuk/STPP-398',
     type: 'team',
-    role: 'Frontend Developer — implemented the hero section, About the Game, Features, Reviews, and FAQ sections, Privacy Policy and Terms of Service & animations.',
+    role: 'Frontend Developer — implemented the hero section, About the Game, Features, Reviews, and FAQ sections, Privacy Policy and Terms of Service & animations',
   },
 ];
 
 const PROJECTS_PER_PAGE = 4;
 
 export default function ProjectsSection() {
+  const t = useTranslations('ProjectsSection');
+
   const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
 
   const visibleProjects = projects.slice(0, visibleCount);
@@ -101,7 +105,7 @@ export default function ProjectsSection() {
     <section className={styles.section}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h2 className={styles.title}>Featured Projects</h2>
+          <h2 className={styles.title}>{t('title')}</h2>
         </header>
 
         <ul className={styles.projects}>
@@ -116,12 +120,13 @@ export default function ProjectsSection() {
                     sizes="(min-width: 640px) 50vw, 100vw"
                     className={styles.image}
                   />
+
                   <span
                     className={`${styles.badge} ${
                       project.type === 'team' ? styles.badgeTeam : styles.badgeSolo
                     }`}
                   >
-                    {project.type === 'team' ? 'Team project' : 'Solo project'}
+                    {project.type === 'team' ? t('teamProject') : t('soloProject')}
                   </span>
                 </figure>
 
@@ -132,7 +137,7 @@ export default function ProjectsSection() {
 
                   {project.type === 'team' && project.role && (
                     <p className={styles.role}>
-                      <span className={styles.roleLabel}>My role:</span> {project.role}
+                      <span className={styles.roleLabel}>{t('myRole')}</span> {project.role}
                     </p>
                   )}
 
@@ -143,7 +148,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View Project <span aria-hidden="true">→</span>
+                      {t('viewProject')} <span aria-hidden="true">→</span>
                     </a>
 
                     <a
@@ -152,7 +157,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      GitHub <span aria-hidden="true">→</span>
+                      {t('github')} <span aria-hidden="true">→</span>
                     </a>
                   </footer>
                 </div>
@@ -160,15 +165,16 @@ export default function ProjectsSection() {
             </li>
           ))}
         </ul>
+
         {hasMore && (
           <div className={styles.loadMoreWrapper}>
             <button
               type="button"
               onClick={handleLoadMore}
               className={styles.loadMoreButton}
-              aria-label="Load more projects"
+              aria-label={t('loadMore')}
             >
-              Load More
+              {t('loadMore')}
             </button>
           </div>
         )}

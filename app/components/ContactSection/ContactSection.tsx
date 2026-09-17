@@ -3,10 +3,13 @@
 import { motion } from 'framer-motion';
 import { FiMapPin, FiMail, FiFileText } from 'react-icons/fi';
 import { FaGithub, FaFacebookF, FaTelegram } from 'react-icons/fa6';
+import { useTranslations } from 'next-intl';
 
 import styles from './ContactSection.module.css';
 
 export default function ContactSection() {
+  const t = useTranslations('ContactSection');
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -17,22 +20,20 @@ export default function ContactSection() {
           viewport={{ once: true }}
         >
           <header className={styles.header}>
-            <h2 className={styles.title}>Contact</h2>
+            <h2 className={styles.title}>{t('title')}</h2>
 
-            <p className={styles.description}>
-              Interested in working together? Let&apos;s have a conversation.
-            </p>
+            <p className={styles.description}>{t('description')}</p>
           </header>
 
           <address className={styles.location}>
             <FiMapPin className={styles.icon} aria-hidden="true" />
-            <span>Berdychiv, Ukraine</span>
+            <span>{t('location')}</span>
           </address>
 
           <div className={styles.actions}>
             <a href="mailto:manilchuk.v@gmail.com" className={styles.primaryLink}>
               <FiMail className={styles.icon} aria-hidden="true" />
-              <span>Get in Touch</span>
+              <span>{t('getInTouch')}</span>
             </a>
 
             <a
@@ -42,11 +43,11 @@ export default function ContactSection() {
               className={styles.secondaryLink}
             >
               <FiFileText className={styles.icon} aria-hidden="true" />
-              <span>View Resume</span>
+              <span>{t('viewResume')}</span>
             </a>
           </div>
 
-          <nav className={styles.socials} aria-label="Social links">
+          <nav className={styles.socials} aria-label={t('socialLinks')}>
             <a
               href="https://github.com/manilchuk"
               target="_blank"

@@ -1,0 +1,28 @@
+{
+  "HeroSection": {
+    "profilePicture": "Profile Picture",
+    "name": "Manylchuk Valentyn",
+    "title": "Full Stack Developer",
+    "description": "I build exceptional and accessible digital experiences for the web. Focused on creating elegant solutions to complex problems."
+  },
+  "SkillsSection": {
+    "title": "Skills & Technologies"
+  },
+  "ProjectsSection": {
+    "title": "Featured Projects",
+    "teamProject": "Team project",
+    "soloProject": "Solo project",
+    "myRole": "My role:",
+    "viewProject": "View Project",
+    "github": "GitHub",
+    "loadMore": "Load More"
+  },
+  "ContactSection": {
+    "title": "Contact",
+    "description": "Interested in working together? Let's have a conversation.",
+    "location": "Berdychiv, Ukraine",
+    "getInTouch": "Get in Touch",
+    "viewResume": "View Resume",
+    "socialLinks": "Social links"
+  }
+}
