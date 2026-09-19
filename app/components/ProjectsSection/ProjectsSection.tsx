@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 import styles from './ProjectsSection.module.css';
@@ -104,13 +105,37 @@ export default function ProjectsSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <header className={styles.header}>
+        <motion.header
+          className={styles.header}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
           <h2 className={styles.title}>{t('title')}</h2>
-        </header>
+        </motion.header>
 
         <ul className={styles.projects}>
-          {visibleProjects.map((project) => (
-            <li key={project.id} className={styles.projectItem}>
+          {visibleProjects.map((project, index) => (
+            <motion.li
+              key={project.id}
+              className={styles.projectItem}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: 0.6,
+                delay: (index % PROJECTS_PER_PAGE) * 0.12,
+                ease: 'easeOut',
+              }}
+              whileHover={{
+                y: -6,
+                transition: {
+                  duration: 0.25,
+                  ease: 'easeOut',
+                },
+              }}
+            >
               <article className={styles.card}>
                 <figure className={styles.imageWrapper}>
                   <Image
@@ -162,21 +187,29 @@ export default function ProjectsSection() {
                   </footer>
                 </div>
               </article>
-            </li>
+            </motion.li>
           ))}
         </ul>
 
         {hasMore && (
-          <div className={styles.loadMoreWrapper}>
-            <button
+          <motion.div
+            className={styles.loadMoreWrapper}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <motion.button
               type="button"
               onClick={handleLoadMore}
               className={styles.loadMoreButton}
               aria-label={t('loadMore')}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
             >
               {t('loadMore')}
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         )}
       </div>
     </section>

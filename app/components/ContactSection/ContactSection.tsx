@@ -13,24 +13,62 @@ export default function ContactSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <motion.div
-          className={styles.content}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <div className={styles.content}>
           <header className={styles.header}>
-            <h2 className={styles.title}>{t('title')}</h2>
+            <motion.h2
+              className={styles.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.6,
+                ease: 'easeOut',
+              }}
+            >
+              {t('title')}
+            </motion.h2>
 
-            <p className={styles.description}>{t('description')}</p>
+            <motion.p
+              className={styles.description}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.15,
+                ease: 'easeOut',
+              }}
+            >
+              {t('description')}
+            </motion.p>
           </header>
 
-          <address className={styles.location}>
+          <motion.address
+            className={styles.location}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.3,
+              ease: 'easeOut',
+            }}
+          >
             <FiMapPin className={styles.icon} aria-hidden="true" />
             <span>{t('location')}</span>
-          </address>
+          </motion.address>
 
-          <div className={styles.actions}>
+          <motion.div
+            className={styles.actions}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.45,
+              ease: 'easeOut',
+            }}
+          >
             <a href="mailto:manilchuk.v@gmail.com" className={styles.primaryLink}>
               <FiMail className={styles.icon} aria-hidden="true" />
               <span>{t('getInTouch')}</span>
@@ -45,9 +83,20 @@ export default function ContactSection() {
               <FiFileText className={styles.icon} aria-hidden="true" />
               <span>{t('viewResume')}</span>
             </a>
-          </div>
+          </motion.div>
 
-          <nav className={styles.socials} aria-label={t('socialLinks')}>
+          <motion.nav
+            className={styles.socials}
+            aria-label={t('socialLinks')}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.6,
+              ease: 'easeOut',
+            }}
+          >
             <a
               href="https://github.com/manilchuk"
               target="_blank"
@@ -77,8 +126,8 @@ export default function ContactSection() {
             >
               <FaTelegram className={styles.socialIcon} aria-hidden="true" />
             </a>
-          </nav>
-        </motion.div>
+          </motion.nav>
+        </div>
       </div>
     </section>
   );
