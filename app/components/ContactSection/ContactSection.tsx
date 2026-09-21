@@ -75,7 +75,7 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="/resume_standart_en.pdf"
+              href="/resume-v2.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.secondaryLink}
